@@ -1,7 +1,7 @@
 import axios from "axios";
 import { dbUrl } from "../common/SummaryApi";
 import { SummaryApi } from "../common/SummaryApi";
-import store from "../store/store"; // استدعاء الـ store عشان نجيب منه حالة اليوزر
+import store from "../store/store"; 
 
 export const Axios = axios.create({
   baseURL: dbUrl,
