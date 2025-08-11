@@ -1,0 +1,40 @@
+
+:root {
+  /* Main green color palette */
+  --color-primary: #8BC34A;
+  --color-primary-dark: #689F38;
+  --color-primary-light: #AED581;
+  --color-primary-bg: #F1F8E9;
+
+  /* Accent color */
+  --color-accent: #FFC107;
+
+  /* Text and border */
+  --color-border: #C5E1A5;
+  --color-text-dark: #2E7D32;
+  --color-text-light: #558B2F;
+}
+ 
+
+
+
+
+
+
+.text-truncate {
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rounded-circle:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border:3px solid green
+}
+.bg-light-green {
+ background-color: #C0EBA6;
+}
