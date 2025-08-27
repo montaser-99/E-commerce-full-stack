@@ -19,8 +19,10 @@ import { webhookStripe } from "../controllers/order.controller.js";
 
 const app = express();
 
-app.use(helmet({ crossOriginResourcePolicy: false }));
+app.use(express.json());
+app.use(cookieParser());
 app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
+app.use(helmet({ crossOriginResourcePolicy: false }));
 app.use(morgan("dev"));
 
 app.post(
@@ -28,8 +30,7 @@ app.post(
   express.raw({ type: "application/json" }),
   webhookStripe
 );
-app.use(express.json());
-app.use(cookieParser());
+
 
 // Routes
 app.get("/", (req, res) => {
@@ -47,5 +48,5 @@ app.use("/api/order", orderRouter);
 // Connect DB
 Dbconnection();
 
-// أهم حاجة: نخلي Vercel يعرف يتعامل مع app
+
 export default app;
