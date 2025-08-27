@@ -69,7 +69,7 @@ function Register() {
       <div className="row h-100">
         <div className="col-12 col-md-5 p-0">
           <img
-            src="../assets/Sign up.svg"
+            src="/assets/Sign up.svg"
             className="w-100 h-100"
             style={{ objectFit: "contain", minHeight: "100vh" }}
             alt="Register Visual"

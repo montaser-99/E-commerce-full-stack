@@ -85,7 +85,7 @@ function Forgotpassword() {
                 <div className='container-fluid vh-100'>
                     <div className='row h-100'>
                         <div className='col-12 col-md-6'>
-                             <img src='../assets/Forgot.svg' className='h-100 w-100' style={{objectFit:"contain"}}></img>
+                             <img src='/assets/Forgot.svg' className='h-100 w-100' style={{objectFit:"contain"}}></img>
                         </div>
                         <div className='col-12 col-md-6 d-flex justify-content-center align-items-center'>
 

@@ -72,7 +72,7 @@ function Verifyotp() {
         
             <div className='container-fluid vh-100'>
                 <div className='row h-100'>
-                    <div className='col-12 col-md-6'> <img src='../assets/otp.svg' className='h-100 w-100'></img>
+                    <div className='col-12 col-md-6'> <img src='/assets/otp.svg' className='h-100 w-100'></img>
                     </div>
                     <div className='col-12 col-md-6 d-flex justify-content-center align-items-center'>
 

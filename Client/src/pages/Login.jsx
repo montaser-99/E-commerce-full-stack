@@ -55,7 +55,7 @@ function Login() {
       <div className="row h-100">
         <div className="col-12 col-md-6 p-0">
           <img
-            src="../assets/login.svg"
+            src="/assets/login.svg"
             className="h-100 w-100"
             style={{ objectFit: "contain" }}
             alt="Login Visual"
