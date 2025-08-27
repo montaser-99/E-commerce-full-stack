@@ -14,7 +14,7 @@ function MyOrders() {
       const response = await axios.get("/api/order/my-orders", {
         withCredentials: true,
       });
-      setOrders(response.data.data);
+      setOrders(response.data?.data || [])
     } catch (error) {
       console.error("Failed to fetch orders:", error);
     } finally {
@@ -30,12 +30,12 @@ function MyOrders() {
       </div>
     );
 
-  if (orders.length === 0)
-    return (
-      <div className="text-center mt-5">
-        <h4 className="text-muted">You have no orders yet 🛒</h4>
-      </div>
-    );
+  if (!orders || orders.length === 0)
+  return (
+    <div className="text-center mt-5">
+      <h4 className="text-muted">You have no orders yet 🛒</h4>
+    </div>
+  );
 
   const getStatusBadge = (status) => {
     switch (status.toLowerCase()) {
