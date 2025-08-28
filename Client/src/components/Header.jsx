@@ -82,8 +82,11 @@ function Header() {
                                         <IoPersonCircleSharp size={35} className="me-1" />
                                         <span className="d-none d-lg-inline">{user.name}</span>
                                     </button>
-                                    <ul className="dropdown-menu dropdown-menu-end shadow" aria-labelledby="dropdownMenu2">
-                                           <li>
+                                    <ul
+                                        className="dropdown-menu dropdown-menu-end shadow w-100 w-lg-auto mt-2 text-center text-lg-start"
+                                        aria-labelledby="dropdownMenu2"
+                                    >
+                                        <li>
                                             <button className="dropdown-item" type="button" onClick={() => navigate("/profile")}>
                                                 My Profile
                                             </button>
@@ -94,7 +97,7 @@ function Header() {
                                             </button>
                                         </li>
                                         <li>
-                                            <button className="dropdown-item" type="button"  onClick={() => navigate("/profile/my-address")}>
+                                            <button className="dropdown-item" type="button" onClick={() => navigate("/profile/my-address")}>
                                                 Address
                                             </button>
                                         </li>
@@ -108,6 +111,7 @@ function Header() {
                                             </button>
                                         </li>
                                     </ul>
+
                                 </div>
 
                                 {/* Cart Button */}

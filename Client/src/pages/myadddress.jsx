@@ -4,7 +4,7 @@ function Myadddress() {
     return (
         <>
 
-        <h2>My Addresses</h2>
+        <h2 className='fw-bold'>My Addresses</h2>
         <AddressList/>
         </>
     )

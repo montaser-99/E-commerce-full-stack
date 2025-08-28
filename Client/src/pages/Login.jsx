@@ -5,10 +5,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { Axios } from '../Utils/Axios';
 import { SummaryApi } from '../common/SummaryApi';
+import { useDispatch } from 'react-redux';
+import { getuserinfo } from '../store/userdetailsSlice';
 
 function Login() {
   const navigate = useNavigate();
-
+  const dispatch = useDispatch()
   const [data, setData] = useState({
     email: "admin@gmail.com",
     password: "Admin1234*",
@@ -41,6 +43,7 @@ function Login() {
 
       if (response.data.success) {
         toast.success(response.data.message);
+        dispatch(getuserinfo(response.data.user));
         setData({ email: "", password: "" });
         navigate("/");
       }
@@ -104,7 +107,7 @@ function Login() {
               type="submit"
               className="btn btn-primary w-100 my-3"
               disabled={!isFormValid}
-               style={{backgroundColor: "var(--color-primary)", borderColor: "var(--color-border)" }}
+              style={{ backgroundColor: "var(--color-primary)", borderColor: "var(--color-border)" }}
             >
               Sign-in
             </button>
