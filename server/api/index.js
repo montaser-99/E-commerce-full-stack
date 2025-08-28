@@ -19,18 +19,24 @@ import { webhookStripe } from "../controllers/order.controller.js";
 
 const app = express();
 
-app.use(express.json());
-app.use(cookieParser());
-app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
+// ✅ أول حاجة CORS
+app.use(cors({
+  origin: process.env.FRONTEND_URL,
+  credentials: true,
+}));
+
+// ✅ بعدين الباقي
 app.use(helmet({ crossOriginResourcePolicy: false }));
 app.use(morgan("dev"));
+app.use(cookieParser());
+app.use(express.json());
 
+// ✅ Stripe webhook لازم يكون قبل express.json()
 app.post(
   "/webhook",
   express.raw({ type: "application/json" }),
   webhookStripe
 );
-
 
 // Routes
 app.get("/", (req, res) => {
@@ -47,6 +53,5 @@ app.use("/api/order", orderRouter);
 
 // Connect DB
 Dbconnection();
-
 
 export default app;
