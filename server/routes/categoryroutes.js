@@ -17,4 +17,4 @@ categoryRouter.delete('/delete-category/:id', auth, authorizeRoles("Admin"), del
 
 
 
-export default categoryRouter 
+export default categoryRouter  

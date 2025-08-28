@@ -11,4 +11,4 @@ SubCategoryRouter.put("/update-subcategory",auth,authorizeRoles("Admin"),UpdateS
 SubCategoryRouter.delete("/delete/:id",auth,authorizeRoles("Admin"),deleteSubCategory)
 
 
-export default SubCategoryRouter 
+export default SubCategoryRouter   
